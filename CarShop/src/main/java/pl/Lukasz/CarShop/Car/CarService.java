@@ -29,4 +29,8 @@ public class CarService {
     public List<Car> findByNameAndModel(String name, String model) {
         return carRepository.findByNameAndModel(name, model);
     }
+
+    public Car save(Car car) {
+        return  carRepository.save(car);
+    }
 }

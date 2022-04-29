@@ -11,4 +11,6 @@ public interface CarRepository extends JpaRepository<Car, Long> {
     List<Car> findByName(String name);
 
     List<Car> findByNameAndModel(String name, String model);
+
+    Car save(Car car);
 }

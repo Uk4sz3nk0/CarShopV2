@@ -36,5 +36,10 @@ public class CarController {
     public List<Car> findByNameAndModel(@PathVariable String name, @PathVariable String model){
         return carService.findByNameAndModel(name, model);
     }
+
+    @PostMapping("/add")
+    public Car addCar(@RequestBody Car car){
+        return carService.save(car);
+    }
 }
 

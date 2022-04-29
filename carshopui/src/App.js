@@ -1,10 +1,13 @@
 import './App.css';
-import CarComponent from './components/cars/CarComponent';
+import Navbar from './components/ui/navbar/Navbar'
+import CarsDisplay from './components/ui/cars_display/CarsDisplay'
 
 function App() {
   return (
     <div className="App">
-        <CarComponent />
+        <Navbar />
+        <CarsDisplay />
+
     </div>
   );
 }
