@@ -13,7 +13,6 @@ public class CarService {
 
     private final CarRepository carRepository;
 
-
     public Optional<Car> findById(Long id) {
         return carRepository.findById(id);
     }
