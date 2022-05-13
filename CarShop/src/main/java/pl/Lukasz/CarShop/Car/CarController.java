@@ -17,7 +17,7 @@ public class CarController {
 
     private final CarService carService;
 
-    @GetMapping("/carbyid/{id}")
+    @GetMapping("/car/{id}")
     public Optional<Car> findById(@PathVariable Long id){
         return carService.findById(id);
     }
