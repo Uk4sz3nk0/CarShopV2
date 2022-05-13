@@ -6,7 +6,7 @@ class Navbar extends React.Component{
         return (
                 <nav class="flex items-center justify-between flex-wrap bg-gray-400 p-6">
                     <div class="flex items-center flex-shrink-0 text-white mr-6">
-                        <a href="http://localhost:3000/" class=" text-xl tracking-tight text-red-600 font-bold">MOTOMOTO</a>
+                        <span class=" text-xl tracking-tight text-red-600 font-bold">MOTOMOTO</span>
                     </div>
                     <div class="block w-64">
                     </div>

@@ -4,18 +4,19 @@ package pl.Lukasz.CarShop.ExpandedCar;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import pl.Lukasz.CarShop.Car.Car;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
 @Getter @Setter
 @NoArgsConstructor
-@Table(name="expandedcar")
+@Table(name="expcar")
 public class ExpandedCar {
 
     @Id
-    private Long expandedCar_id;
+    private Long id;
     private String who;
     private String version;
     private String generation;
@@ -30,9 +31,5 @@ public class ExpandedCar {
     private int seats;
     private String color;
     private String condition;
-
-    @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "car_id")
-    private Car car;
 
 }

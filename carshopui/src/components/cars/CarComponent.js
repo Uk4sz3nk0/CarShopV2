@@ -22,7 +22,7 @@ class CarComponent extends React.Component {
         return (
             this.state.cars.map(
                 car => 
-                <a href={car.id} class="flex font-sans border-solid border-2 rounded-md mt-2 ml-12 mr-12" key={car.id}>
+                <a href={car.id} class="flex font-sans border-solid border-2 rounded-md mt-2" key={car.id}>
                     <div class="flex-none w-64 px-auto relative">
                         <img src="https://storage.carsmile.pl/cache/upload/8337/format,webp;size,1000,500/volkswagen_id3_1st_26.webp" alt="" class="absolute inset-0 w-full h-auto object-cover py-7 ml-2" />
                     </div>
