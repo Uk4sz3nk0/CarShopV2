@@ -4,10 +4,9 @@ package pl.Lukasz.CarShop.CarEquipment;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import pl.Lukasz.CarShop.Car.Car;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Getter @Setter
@@ -16,7 +15,7 @@ import javax.persistence.Table;
 public class CarEquipment {
 
     @Id
-    private Long id;
+    private Long equipment_id;
     private boolean abs;
     private boolean asr;
     private boolean bluetooth;
@@ -86,5 +85,8 @@ public class CarEquipment {
     private boolean active_cruise_control;
     private boolean power_steering;
 
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "car_id")
+    private Car car;
 
 }
