@@ -15,6 +15,7 @@ import javax.persistence.*;
 public class ExpandedCar {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long expandedCar_id;
     private String who;
     private String version;
@@ -29,10 +30,10 @@ public class ExpandedCar {
     private int doors;
     private int seats;
     private String color;
-    private String condition;
+    private String car_condition;
 
     @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "car_id")
+    @JoinColumn(name = "id")
     private Car car;
 
 }
