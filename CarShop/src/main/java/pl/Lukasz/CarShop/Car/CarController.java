@@ -1,9 +1,8 @@
 package pl.Lukasz.CarShop.Car;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Controller;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 
 import java.util.List;
 import java.util.Optional;
@@ -18,27 +17,27 @@ public class CarController {
     private final CarService carService;
 
     @GetMapping("/car/{id}")
-    public Optional<Car> findById(@PathVariable Long id){
+    public Optional<Car> getCarfindById(@PathVariable Long id) {
         return carService.findById(id);
     }
 
     @GetMapping
-    public List<Car> findAll(){
+    public List<Car> findAll() {
         return carService.findAll();
     }
 
     @GetMapping("/{name}")
-    public List<Car> findByName(@PathVariable String name){
+    public List<Car> findByName(@PathVariable String name) {
         return carService.findByName(name);
     }
 
     @GetMapping("/{name}/{model}")
-    public List<Car> findByNameAndModel(@PathVariable String name, @PathVariable String model){
+    public List<Car> findByNameAndModel(@PathVariable String name, @PathVariable String model) {
         return carService.findByNameAndModel(name, model);
     }
 
     @PostMapping("/add")
-    public Car addCar(@RequestBody Car car){
+    public Car addCar(@RequestBody Car car) {
         return carService.save(car);
     }
 }

@@ -86,7 +86,7 @@ public class CarEquipment {
     private boolean power_steering;
 
     @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "car_id")
+    @JoinColumn(name = "id")
     private Car car;
 
 }

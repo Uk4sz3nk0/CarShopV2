@@ -19,16 +19,16 @@ public class Car {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long car_id;
+    private Long id;
     private String name;
     private String model;
     private String short_description;
     private int production_year;
     private int mileage;
     private int engine_capacity;
-    private FuelType fuel_type;
+    private String fuel_type;
     private String localization;
-    private CarType car_type;
+    private String car_type;
     private float price;
 
     @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "car")
